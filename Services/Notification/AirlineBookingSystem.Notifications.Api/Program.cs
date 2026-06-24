@@ -8,6 +8,7 @@ using Microsoft.Data.SqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
