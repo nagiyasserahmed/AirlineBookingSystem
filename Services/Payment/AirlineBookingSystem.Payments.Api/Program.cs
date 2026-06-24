@@ -1,4 +1,5 @@
 using System.Data;
+using AirlineBookingSystem.Payments.Application;
 using AirlineBookingSystem.Payments.Core.Repositories;
 using AirlineBookingSystem.Payments.Infrastructure;
 using Microsoft.Data.SqlClient;
@@ -16,6 +17,11 @@ builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
 builder.Services.AddScoped<IDbConnection>(sp=>
     new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+
+builder.Services.AddMediatR(cfg =>
+{
+   cfg.RegisterServicesFromAssemblies(typeof(AssemblyMarker).Assembly); 
+});
 
 var app = builder.Build();
 

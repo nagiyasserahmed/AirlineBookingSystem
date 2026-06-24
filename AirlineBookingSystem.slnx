@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/BuildingBlocks/">
+    <Project Path="BuildingBlocks/AirlineBookingSystem.BuildingBlocks/AirlineBookingSystem.BuildingBlocks.csproj" />
+  </Folder>
   <Folder Name="/Services/" />
   
   <Folder Name="/Services/Booking/">
