@@ -1,2 +1,31 @@
 <Solution>
+  <Folder Name="/Services/" />
+  
+  <Folder Name="/Services/Booking/">
+    <Project Path="Services/Booking/AirlineBookingSystem.Bookings.Api/AirlineBookingSystem.Bookings.Api.csproj" />
+    <Project Path="Services/Booking/AirlineBookingSystem.Bookings.Application/AirlineBookingSystem.Bookings.Application.csproj" />
+    <Project Path="Services/Booking/AirlineBookingSystem.Bookings.Core/AirlineBookingSystem.Bookings.Core.csproj" />
+    <Project Path="Services/Booking/AirlineBookingSystem.Bookings.Infrastructure/AirlineBookingSystem.Bookings.Infrastructure.csproj" />
+  </Folder>
+
+  <Folder Name="/Services/Flight/">
+    <Project Path="Services/Flight/AirlineBookingSystem.Flights.Api/AirlineBookingSystem.Flights.Api.csproj" />
+    <Project Path="Services/Flight/AirlineBookingSystem.Flights.Application/AirlineBookingSystem.Flights.Application.csproj" />
+    <Project Path="Services/Flight/AirlineBookingSystem.Flights.Core/AirlineBookingSystem.Flights.Core.csproj" />
+    <Project Path="Services/Flight/AirlineBookingSystem.Flights.Infrastructure/AirlineBookingSystem.Flights.Infrastructure.csproj" />
+  </Folder>
+
+  <Folder Name="/Services/Notification/">
+    <Project Path="Services/Notification/AirlineBookingSystem.Notifications.Api/AirlineBookingSystem.Notifications.Api.csproj" />
+    <Project Path="Services/Notification/AirlineBookingSystem.Notifications.Application/AirlineBookingSystem.Notifications.Application.csproj" />
+    <Project Path="Services/Notification/AirlineBookingSystem.Notifications.Core/AirlineBookingSystem.Notifications.Core.csproj" />
+    <Project Path="Services/Notification/AirlineBookingSystem.Notifications.Infrastructure/AirlineBookingSystem.Notifications.Infrastructure.csproj" />
+  </Folder>
+
+  <Folder Name="/Services/Payment/">
+    <Project Path="Services/Payment/AirlineBookingSystem.Payments.Api/AirlineBookingSystem.Payments.Api.csproj" />
+    <Project Path="Services/Payment/AirlineBookingSystem.Payments.Application/AirlineBookingSystem.Payments.Application.csproj" />
+    <Project Path="Services/Payment/AirlineBookingSystem.Payments.Core/AirlineBookingSystem.Payments.Core.csproj" />
+    <Project Path="Services/Payment/AirlineBookingSystem.Payments.Infrastructure/AirlineBookingSystem.Payments.Infrastructure.csproj" />
+  </Folder>
 </Solution>
