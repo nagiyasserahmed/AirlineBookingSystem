@@ -31,4 +31,7 @@
     <Project Path="Services/Payment/AirlineBookingSystem.Payments.Core/AirlineBookingSystem.Payments.Core.csproj" />
     <Project Path="Services/Payment/AirlineBookingSystem.Payments.Infrastructure/AirlineBookingSystem.Payments.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/Uploads/">
+    <File Path="../../../../../Downloads/NET8MicroservicesUsingRabbitMqMassTransitArchitectureDiagram.JPG" />
+  </Folder>
 </Solution>

@@ -1,14 +1,18 @@
+using AirlineBookingSystem.BuildingBlocks.Contracts.EventBus.Messages;
 using AirlineBookingSystem.Notifications.Application.Interfaces;
 using AirlineBookingSystem.Notifications.Core.Entities;
+using MassTransit;
 
 namespace AirlineBookingSystem.Notifications.Application.Services;
 
-public class NotificationService : INotificationService
+public class NotificationService(IPublishEndpoint publishEndpoint) : INotificationService
 {
-    public Task<Boolean> SendNotificationAsync(Notification notification)
+    public async Task SendNotificationAsync(Notification notification)
     {
         Console.WriteLine($"Notification sent to {notification.Recipient}: {notification.Message}");
 
-        return Task.FromResult(true);
+        var notificationEvent = new NotificationEvent(notification.Recipient, notification.Message, notification.Type);
+
+        await publishEndpoint.Publish(notificationEvent);
     }
 }

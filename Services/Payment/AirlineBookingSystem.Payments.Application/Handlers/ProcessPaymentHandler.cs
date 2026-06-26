@@ -1,11 +1,13 @@
+using AirlineBookingSystem.BuildingBlocks.Contracts.EventBus.Messages;
 using AirlineBookingSystem.Payments.Application.Commands;
 using AirlineBookingSystem.Payments.Core.Entities;
 using AirlineBookingSystem.Payments.Core.Repositories;
+using MassTransit;
 using MediatR;
 
 namespace AirlineBookingSystem.Payments.Application.Handlers;
 
-public class ProcessPaymentHandler(IPaymentRepository paymentRepository) : IRequestHandler<ProcessPaymentCommand, Guid>
+public class ProcessPaymentHandler(IPaymentRepository paymentRepository, IPublishEndpoint publishEndpoint) : IRequestHandler<ProcessPaymentCommand, Guid>
 {
     public async Task<Guid> Handle(ProcessPaymentCommand request, CancellationToken cancellationToken)
     {
@@ -18,6 +20,8 @@ public class ProcessPaymentHandler(IPaymentRepository paymentRepository) : IRequ
         };
 
         await paymentRepository.ProcessPaymentAsync(payment);
+
+        await publishEndpoint.Publish(new PaymentProcessedEvent(payment.Id, payment.BookingId, payment.Amount, payment.PaymentDate));
 
         return payment.Id;
     }
