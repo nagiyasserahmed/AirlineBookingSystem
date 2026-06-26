@@ -2,6 +2,8 @@
 
 A microservices-based airline booking backend built with .NET — designed to practice distributed systems patterns, async messaging, and clean service boundaries.
 
+![alt text](airline_booking_flow_diagram.png)
+
 ## What is this?
 
 This project simulates a real-world airline booking flow split across four independent services that communicate entirely through events — no direct HTTP calls between services. Once a booking is created, everything else (payment, notification, confirmation) happens automatically through the message bus.
